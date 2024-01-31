@@ -1,0 +1,72 @@
+#carousel {
+  display: grid;
+  grid-template: 415px/1fr;
+  width: 100%;
+  height: 415px;
+}
+#navigation {
+  grid-area: 1/1/2/2;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+}
+#navigation img{
+  height: 46.68px;
+  width: 79.2px;
+}
+#navigation #left {
+  transform: rotate(90deg);
+}
+#navigation #right {
+  transform: rotate(-90deg);
+}
+#navigation p {
+  align-self: end;
+  justify-self: center;
+  grid-area: 1/2/2/3;
+  color: white;
+  font-family: Montserrat;
+font-size: 18px;
+font-weight: 500;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: center;
+margin: 25px;
+}
+#navigation .btn{
+    background:none;
+    border:none
+}
+#navigation .btn.left{
+  justify-self: left;
+}
+#navigation .btn.right{
+  justify-self: right;
+}
+#imageHold {
+  grid-area: 1/1/2/2;
+}
+#imageHold img {
+  position: relative;
+  height: 415px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+@media (max-width:800px) {
+  #carousel {
+    grid-template: 255px/1fr;
+    width: 100%;
+    height: 255px;
+  }
+  #imageHold img{
+    height: 255px;
+  }
+  #navigation img{
+    height: 11.67px;
+    width: 19.8px;
+  }
+  #navigation {
+    grid-template-columns: 20% auto 20%;
+  }
+}
